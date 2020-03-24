@@ -15,4 +15,4 @@ ENV MONGODB_DB=doe_sangue
 
 ENV MONGODB_COLLECTION=niveis
 
-CMD scrapy crawl hemope
+CMD ["/bin/bash"]
