@@ -1,4 +1,4 @@
-# Doe Sangue Scraping Tool ![doe sangue](https://raw.githubusercontent.com/edumco/doe-sangue-scrapy/master/assets/icon-small.svg)
+# Doe Sangue Scraping Tool
 
 ![GitHub](https://img.shields.io/github/license/edumco/doe-sangue-scrapy)
 ![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/edumco/doe-sangue)
