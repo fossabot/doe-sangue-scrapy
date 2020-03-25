@@ -9,7 +9,7 @@ cssselect==1.1.0
 decorator==4.4.2
 flake8==3.7.9
 freeze==1.0.10
-hyperlink==18.0.0
+hyperlink==19.0.0
 idna==2.8
 incremental==17.5.0
 ipdb==0.13.2
