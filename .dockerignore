@@ -1,1 +1,5 @@
-
+.deepsource.toml
+.gitignore
+.whitesource
+LICENSE.txt
+README.md
