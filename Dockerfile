@@ -4,9 +4,16 @@ COPY . /app
 
 WORKDIR /app
 
-RUN pip install -r requirements.txt
+RUN pip install --compile -r requirements.txt
 
-# Docker creates a network layer and a dns that maps IPs to service names.
+
+FROM requirements as lint
+
+RUN pip install --compile -r requirements-test.txt
+
+
+FROM requirements as production
+
 ENV MONGODB_SERVER=mongo
 
 ENV MONGODB_PORT=27017
