@@ -6,6 +6,7 @@ wheel==0.34.2
 
 # Unique
 pymongo==3.10.1
+python-decouple==3.3
 
 # Common
 six==1.14.0
@@ -49,3 +50,5 @@ Pygments==2.6.1
 PyHamcrest==2.0.2  
 traitlets==4.3.3  
 wcwidth==0.1.9  
+
+# spyder==4.1.1 deptree
