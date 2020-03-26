@@ -22,4 +22,4 @@ ENV MONGODB_DB=doe_sangue
 
 ENV MONGODB_COLLECTION=niveis
 
-CMD ["/bin/bash"]
+CMD ["python", "run.py"]
