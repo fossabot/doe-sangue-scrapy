@@ -13,9 +13,7 @@ services:
       - "27017"
 
   scrapper:
-    build:
-      context: ./
-      dockerfile: Dockerfile
+    image: "edumco/doe-sangue:latest"
     environment:
       MONGODB_SERVER: mongo
       MONGODB_PORT: 27017
