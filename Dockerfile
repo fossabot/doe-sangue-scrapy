@@ -22,4 +22,7 @@ ENV MONGODB_DB=doe_sangue
 
 ENV MONGODB_COLLECTION=niveis
 
+
+FROM requirements as stand-alone
+
 CMD ["python", "run.py"]
