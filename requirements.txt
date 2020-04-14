@@ -39,7 +39,7 @@ Scrapy==2.0.1
 
 # ipdb tree
             decorator==4.4.2
-            parso==0.6.2
+            parso==0.7.0
             ptyprocess==0.6.0 
             wcwidth==0.1.9
         backcall==0.1.0
