@@ -20,12 +20,12 @@ PyHamcrest==2.0.2
         cssselect==1.1.0
         lxml==4.5.0
         w3lib==1.21.0
-        cryptography==2.8
+        cryptography==2.9
         Automat==20.2.0
         constantly==15.1.0
         hyperlink==19.0.0
         incremental==17.5.0
-        zope.interface==5.0.2
+        zope.interface==5.1.0
     parsel==1.5.2
     Protego==0.1.16
     pyOpenSSL==19.1.0
@@ -39,12 +39,12 @@ Scrapy==2.0.1
 
 # ipdb tree
             decorator==4.4.2
-            parso==0.6.2
+            parso==0.7.0
             ptyprocess==0.6.0 
             wcwidth==0.1.9
         backcall==0.1.0
         ipython-genutils==0.2.0
-        jedi==0.16.0 
+        jedi==0.17.0 
         pexpect==4.8.0  
         pickleshare==0.7.5  
         prompt-toolkit==3.0.5  
