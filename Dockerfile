@@ -1,28 +1,50 @@
 FROM python:3.6.10-slim-buster as requirements
 
-COPY . /app
+COPY requirements.txt /app/requirements.txt
 
 WORKDIR /app
 
 RUN pip install --compile -r requirements.txt
 
 
-FROM requirements as lint
+FROM requirements as app 
+
+COPY . /app
+
+
+
+FROM app as test-requirements
+
+COPY requirements-test.txt /app/requirements-test.txt
 
 RUN pip install --compile -r requirements-test.txt
 
 
-FROM requirements as production
 
-ENV MONGODB_SERVER=mongo
+FROM test-requirements as test
 
-ENV MONGODB_PORT=27017
+COPY . /app
 
-ENV MONGODB_DB=doe_sangue
+WORKDIR /app
 
-ENV MONGODB_COLLECTION=niveis
+RUN tox
 
 
-FROM requirements as stand-alone
 
-CMD ["python", "run.py"]
+FROM app as production
+
+ENV MONGODB_SERVER=${MONGODB_SERVER}
+
+ENV MONGODB_PORT=${MONGODB_PORT}
+
+ENV MONGODB_DB=${MONGODB_DB}
+
+ENV MONGODB_COLLECTION=${MONGODB_DB}
+
+ENV WAIT_HOSTS=${MONGODB_SERVER}:${MONGODB_PORT}
+
+ADD https://github.com/ufoscout/docker-compose-wait/releases/download/2.7.3/wait /app/wait
+
+RUN chmod +x wait
+
+CMD ./wait && python run.py
