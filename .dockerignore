@@ -5,3 +5,5 @@ LICENSE.txt
 README.md
 docker-compose.yml
 .env
+docs
+assets
