@@ -27,7 +27,7 @@ COPY . /app
 
 WORKDIR /app
 
-RUN tox
+RUN tox -e py36
 
 
 
