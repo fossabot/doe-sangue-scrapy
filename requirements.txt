@@ -35,7 +35,7 @@ PyHamcrest==2.0.2
     PyDispatcher==2.0.5
     service-identity==18.1.0
     Twisted==20.3.0
-Scrapy==2.0.1
+Scrapy==2.1.0
 
 # ipdb tree
             decorator==4.4.2
